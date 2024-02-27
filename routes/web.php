@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('pageNotFound', function () {
+    return view('Errors/PageNotFound');
+})->name('errors.404');
 Route::get('/', function () {
     return view('welcome');
 });
