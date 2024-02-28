@@ -11,7 +11,7 @@ class StoreTransaccionRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class StoreTransaccionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "numDocumentoIdObligado" =>  ['required', 'string'],
+            // "numFactura" => "CTFE226713",
+            // "tipoNota" => null,
+            // "numNota" => null,
         ];
     }
 }
